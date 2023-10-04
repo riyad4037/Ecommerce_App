@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Ecommerce Application</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_category_fragment">hello_blank_category_fragment</string>
+    <string name="hello_blank_favourite_fragment">hello_blank_favourite_fragment</string>
+    <string name="hello_blank_User_Account_fragment">hello_blank_User_Account_fragment</string>
+    <string name="web_client_id">37005615489-27a4nkc6g8cqaraoa37lka7q6giub3vo.apps.googleusercontent.com</string>
+
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
+
+</resources>

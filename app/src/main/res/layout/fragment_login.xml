@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_grey_Color"
+    tools:context=".view.fragment.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/LoginAccountPageTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Login to your Account"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/EmailAddressEditTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Email"
+            app:hintTextColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/PasswordEditTextLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LoginAccountPageTitleTextView"
+            app:startIconDrawable="@drawable/baseline_email_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EmailAddressEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/PasswordEditTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Password"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/EmailAddressEditTextLayout"
+            app:startIconDrawable="@drawable/baseline_lock_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textVisiblePassword"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/RememberMeCheckBoxLoginPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Remember me"
+            android:textColor="@color/secondary_Color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PasswordEditTextLayout" />
+
+        <TextView
+            android:id="@+id/ForgetPasswordLoginPageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:textColor="@drawable/clicked_color_change"
+            android:text="Forget password?"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/RememberMeCheckBoxLoginPage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RememberMeCheckBoxLoginPage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/LogInButtonTextView"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:padding="10dp"
+            android:text="Log In"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RememberMeCheckBoxLoginPage" />
+
+        <View
+            android:id="@+id/DividerView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="30dp"
+            android:background="@color/secondary_Color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LogInButtonTextView" />
+
+        <TextView
+            android:id="@+id/DividerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_grey_Color"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Or continue with"
+            android:textColor="@color/secondary_Color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/DividerView"
+            app:layout_constraintEnd_toEndOf="@id/DividerView"
+            app:layout_constraintStart_toStartOf="@+id/DividerView"
+            app:layout_constraintTop_toTopOf="@+id/DividerView" />
+
+
+        <ImageButton
+            android:id="@+id/ContinueWithFacebookTextViewLoginPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/outliner_tertiary"
+            android:src="@drawable/facebook"
+            android:contentDescription="Continue With Facebook button"
+            android:padding="10dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/ContinueWithGoogleTextViewLoginPage"
+            app:layout_constraintStart_toStartOf="@+id/DividerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/DividerView" />
+
+        <ImageButton
+                android:id="@+id/ContinueWithGoogleTextViewLoginPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/outliner_tertiary"
+            android:src="@drawable/google"
+            android:contentDescription="Continue With Google Button"
+            android:padding="10dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/DividerTextView"
+            app:layout_constraintStart_toEndOf="@+id/ContinueWithFacebookTextViewLoginPage"
+            app:layout_constraintTop_toBottomOf="@+id/DividerView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/SignupButtonLoginPageTextView"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a new account."
+            android:textColor="@drawable/clicked_color_change"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:background="@android:color/transparent"
+    android:alpha="0.6"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/CategoryCreateConformationDialogTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Are you sure to create the category?"
+        android:textColor="@color/tertiary_Color"
+        app:layout_constraintBottom_toTopOf="@+id/CategoryCreateConformationDialogCancelBtn"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/CategoryCreateConformationDialogCancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CategoryCreateConformationDialogTextView"
+        app:layout_constraintEnd_toStartOf="@+id/CategoryCreateConformationDialogConformBtn"
+        />
+
+    <Button
+        android:id="@+id/CategoryCreateConformationDialogConformBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/CategoryCreateConformationDialogCancelBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CategoryCreateConformationDialogCancelBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/CategoryCreateConformationDialogCancelBtn"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

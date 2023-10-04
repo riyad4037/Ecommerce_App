@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="Item Creation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/ProductCreateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Create an Item"
+            android:textAlignment="center"
+            android:textColor="@color/primary_Color"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ProductTitleInputEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ProductTitleInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/outliner_tertiary"
+            android:hint="Product Title"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProductCreateTextView" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ProductPriceInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/outliner_tertiary"
+            android:hint="Product Price"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProductTitleInputEditText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ProductImageListRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/ProductAddImageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProductPriceInputEditText" />
+
+        <Button
+            android:id="@+id/ProductAddImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/outliner_tertiary"
+            android:padding="10dp"
+            android:text="Add Image"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/ProductImageListRecyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ProductImageListRecyclerView" />
+
+        <EditText
+            android:id="@+id/ProductDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/outliner_tertiary"
+            android:gravity="top|left"
+            android:hint="Description"
+            android:lines="10"
+            android:maxLines="15"
+            android:minLines="5"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProductImageListRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ProductColorListRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/ProductAddColorButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProductDescriptionEditText" />
+
+        <Button
+            android:id="@+id/ProductAddColorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/outliner_tertiary"
+            android:padding="10dp"
+            android:text="Add Color"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/ProductColorListRecyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ProductColorListRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ProductSizeListRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/ProductAddColorButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProductColorListRecyclerView" />
+
+        <Button
+            android:id="@+id/ProductAddSizeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/outliner_tertiary"
+            android:padding="10dp"
+            android:text="Add Size"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/ProductSizeListRecyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ProductSizeListRecyclerView" />
+
+        <Button
+            android:id="@+id/ProductItemCreateCancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/outliner_tertiary"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ProductItemCreateButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProductSizeListRecyclerView" />
+
+        <Button
+            android:id="@+id/ProductItemCreateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outliner_tertiary"
+            android:padding="10dp"
+            android:text="Conform"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/ProductItemCreateCancelButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ProductItemCreateCancelButton"
+            app:layout_constraintTop_toTopOf="@+id/ProductItemCreateCancelButton" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
